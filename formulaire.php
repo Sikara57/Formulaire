@@ -71,6 +71,7 @@
                 </p>
             </fieldset>
             <fieldset class="enfants">
+               	<input type="hidden" name="nb_enfant" id="nb_enfant" value=1>
                 <legend>Enfants</legend>
                 <p>
                     <input type="radio" name="enfant" value="oui" id="enfant_o"><label for="enfant_o">Oui</label>
@@ -136,6 +137,7 @@
         </fieldset>
         <fieldset class="rubrique_cred">
             <legend>Rubrique credits</legend>
+            <input type="hidden" name="nb_cred" id="nb_cred" value=1>
             <p class="modif_cred">
                 <a href="#" id="add_c"><img src="images/plus.png" alt="Ajout"></a>
                 <a href="#" id="less_c"><img src="images/moins.png" alt="Suppression"></a>

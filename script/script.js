@@ -215,6 +215,7 @@ $(document).ready(function() //chargement des fonctions lorsque la page est prê
         $('#date_naissance_e'+ nbre_e).datepicker();
         $('#nom_e' + nbre_e).focus();
         nbre_e++;
+		$('#nb_enfant').attr('value',nbre_e);
     });
     
     $('#less_e').click(function(){
@@ -228,6 +229,7 @@ $(document).ready(function() //chargement des fonctions lorsque la page est prê
         }
         else
         {
+			$('#nb_enfant').attr('value',nbre_e);
             console.log(nbre_e);
             $('#enfan_' + nbre_e).remove();
         }
@@ -243,7 +245,7 @@ $(document).ready(function() //chargement des fonctions lorsque la page est prê
         </p>
         <p>
             <label for="date_fin_remb">Date fin de remboursement</label><input type="date" name="date_fin_remb" id="date_fin_remb">
-            <label for="tx_cred">Taux de crédit</label><input type="number" name="tx_cred" id="tx_cred">&nbsp;%
+            <label for="tx_cred">Taux de crédit</label><input type="number" name="tx_cred" id="tx_cred"> %
         </p>
         <p>
             <label for="capital_rest">Capital restant dû</label><input type="number" name="capital_rest" id="capital_rest">
@@ -294,7 +296,7 @@ $(document).ready(function() //chargement des fonctions lorsque la page est prê
             inp4.attr('type','number');
             $(div).append(lab4);
             $(div).append(inp4);
-            $(div).append('&nbsp; %')
+            $(div).append('  %')
             $(div).append('<br><br>')
 
             var lab5=$('<label for="capital_rest' + nbre_c + '">');
@@ -314,6 +316,7 @@ $(document).ready(function() //chargement des fonctions lorsque la page est prê
             $('html,body').animate({scrollTop: $('#nature_emprunt_' + nbre_c).offset().top},'fast');
 
             nbre_c++;
+			$('#nb_cred').attr('value',nbre_c);
         }    
     });
 
@@ -329,7 +332,8 @@ $(document).ready(function() //chargement des fonctions lorsque la page est prê
         }
         else
         {
-             $('#credit_' + nbre_c).remove();
+			$('#nb_cred').attr('value',nbre_c);
+            $('#credit_' + nbre_c).remove();
             console.log(nbre_c);
             var prov=nbre_c-1;
             if(prov>0)

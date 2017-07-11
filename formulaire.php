@@ -14,7 +14,7 @@
     <title>Formulaire</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="index.php" method="post">
         <fieldset class="etat_civil">
             <legend>Etat Civil</legend>
             Nous sommes le <?php echo date("d/m/Y"); ?> <br>
@@ -23,7 +23,7 @@
                 <label for="prenom">Prénom :</label><input type="text" name="prenom" id="prenom">
             </p>
             <p>
-                <label for="age">Age :</label><input type="text" name="age" id="age">
+                <label for="age">Age :</label><input type="number" name="age" id="age">
                 <label for="date_ naissance">Date de naissance</label><input type="date" name="date_naissance" id="date_naissance">
             </p>
             <p>
@@ -40,12 +40,12 @@
                 </p>
                 <p>
                     <label for="mail">Adresse mail</label><input type="email" name="mail" id="mail">
-                    <label for="tel_fixe">Téléphone fixe</label><input type="tel_fixe" name="tel_fixe" id="tel_fixe">
-                    <label for="gsm">GSM</label><input type="tel" name="gsm" id="gsm">
+                    <label for="tel_fixe">Téléphone fixe</label><input type="text" name="tel_fixe" id="tel_fixe">
+                    <label for="gsm">GSM</label><input type="text" name="gsm" id="gsm">
                 </p>
                 <p>
                     <label for="profession">Profession</label><input type="text" name="profession" id="profession">
-                    <label for="revenu">Revenus</label><input type="text" name="revenu" id="revenu">
+                    <label for="revenu">Revenus</label><input type="number" name="revenu" id="revenu">
                 </p>
             </div>
             <fieldset class="situation_familial">
@@ -158,6 +158,10 @@
                 </p>
             </div>
         </fieldset>
+        <div class="validation">
+            <input type="submit" value="Envoyer">
+        </div>
+        
     </form>
 </body>
 </html>

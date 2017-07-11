@@ -212,7 +212,22 @@ $(document).ready(function() //chargement des fonctions lorsque la page est prê
         $(div).append(lab3);
         $(div).append(inp3);
         console.log(nbre_e);
-        $('#date_naissance_e'+ nbre_e).datepicker();
+        $('#date_naissance_e'+ nbre_e).datepicker({
+            altField: "#date_naissance"+ nbre_e,
+            closeText: 'Fermer',
+            firstDay: 1 ,
+            dateFormat: 'yy-mm-dd',
+            prevText: 'Précédent',
+            nextText: 'Suivant',
+            currentText: 'Aujourd\'hui',
+            monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+            monthNamesShort: ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
+            dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+            dayNamesShort: ['Dim.', 'Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'],
+            dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+            weekHeader: 'Sem.'
+        });
+
         $('#nom_e' + nbre_e).focus();
         nbre_e++;
 		$('#nb_enfant').attr('value',nbre_e);
@@ -286,9 +301,24 @@ $(document).ready(function() //chargement des fonctions lorsque la page est prê
             var inp3=$('<input id="date_fin_remb' + nbre_c + '" name="date_fin_remb' + nbre_c + '">');
             lab3.text('Date fin de remboursement');
             inp3.attr('type','date');
-            $('#date_fin_remb'+nbre_c).datepicker();
             $(div).append(lab3);
             $(div).append(inp3);
+            $('#date_fin_remb' + nbre_c).datepicker({
+                altField: "#date_fin_remb" + nbre_c,
+                closeText: 'Fermer',
+                firstDay: 1 ,
+                dateFormat: 'yy-mm-dd',
+                prevText: 'Précédent',
+                nextText: 'Suivant',
+                currentText: 'Aujourd\'hui',
+                monthNames: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+                monthNamesShort: ['Janv.', 'Févr.', 'Mars', 'Avril', 'Mai', 'Juin', 'Juil.', 'Août', 'Sept.', 'Oct.', 'Nov.', 'Déc.'],
+                dayNames: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+                dayNamesShort: ['Dim.', 'Lun.', 'Mar.', 'Mer.', 'Jeu.', 'Ven.', 'Sam.'],
+                dayNamesMin: ['D', 'L', 'M', 'M', 'J', 'V', 'S'],
+                weekHeader: 'Sem.'
+            });
+            
 
             var lab4=$('<label for="tx_cred' + nbre_c + '">');
             var inp4=$('<input id="tx_cred' + nbre_c + '" name="tx_cred' + nbre_c + '">');
